@@ -1,0 +1,22 @@
+  search_path   
+----------------
+ testnm, public
+(1 row)
+
+ c1 
+----
+ 42
+(1 row)
+
+psql:access.sql:17: ERROR:  permission denied for schema testnm
+LINE 1: CREATE TABLE t2(c1 int);
+                     ^
+psql:access.sql:20: ERROR:  permission denied for schema public
+LINE 1: CREATE TABLE public.t2(c1 int);
+                     ^
+psql:access.sql:23: ERROR:  permission denied for table t1
+ c1 
+----
+ 42
+(1 row)
+
